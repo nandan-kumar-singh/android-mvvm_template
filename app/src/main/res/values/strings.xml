@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Alpha</string>
+    <string name="name">Name: </string>
+    <string name="age">Age: </string>
+    <string name="gender">Gender: </string>
+    <string name="cta">Grow old</string>
+    <string name="login">Login</string>
+    <string name="or">OR</string>
+    <string name="register">Register</string>
+    <string name="please_input_username">Please Enter Username</string>
+    <string name="please_input_psw">Please Enter Password</string>
+    <string name="search_article">Search</string>
+    <string name="exit">Exit</string>
+    <string name="home">Home</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="log_out_prompt">Do you want to Sign Out?</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="net_error">Network_error</string>
+</resources>
