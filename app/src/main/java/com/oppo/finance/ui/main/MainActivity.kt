@@ -1,13 +1,16 @@
 package com.oppo.finance.ui.main
 
-import android.os.Build
+import android.view.Menu
 import android.view.MenuItem
 import androidx.core.view.GravityCompat
+import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationView
-import com.oppo.finance.App
 import com.oppo.finance.R
 import com.oppo.finance.base.BaseActivity
-import com.oppo.finance.utils.*
+import com.oppo.finance.utils.NotificationData
+import com.oppo.finance.utils.Preference
+import com.oppo.finance.utils.bigTextStyle
+import com.oppo.finance.utils.showNotification
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -15,6 +18,34 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
     private var isLogin by Preference(Preference.IS_LOGIN, false)
     private var userJson by Preference(Preference.USER_GSON, "")
+
+    private val titleList = arrayOf("Home", "Settings", "Profile")
+    private val fragmentList = arrayListOf<Fragment>()
+    private val homeFragment by lazy { HomeFragment() }
+    private val homeFragment1 by lazy { HomeFragment() }
+    private val homeFragment2 by lazy { HomeFragment() }
+
+
+    init {
+        fragmentList.add(homeFragment)
+        fragmentList.add(homeFragment1)
+        fragmentList.add(homeFragment2)
+    }
+
+
+    override fun initView() {
+        initViewPager()
+        mToolBar.title = getString(R.string.app_name)
+        mToolBar.setNavigationOnClickListener { drawerLayout.openDrawer(GravityCompat.START) }
+        navigationView.setNavigationItemSelectedListener(this)
+        navigationView.menu.findItem(R.id.nav_exit).isVisible = isLogin
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return true
+    }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
@@ -26,6 +57,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             }
 
             R.id.nav_exit -> exit()
+
         }
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
@@ -48,14 +80,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     override fun getLayoutResId() = R.layout.activity_main
 
     override fun initData() {
-        showNotification(
-            context = this,
-            data = NotificationData(
-                id = 1,
-                title = "Header Notification Short Notes",
-                content = "Content of the notification"
-            )
-        )
+
         showNotification(
             context = this,
             data = NotificationData(
@@ -66,31 +91,23 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             )
         )
 
-        showNotification(
-            context = this,
-            data = NotificationData(
-                id = 3,
-                title = "Header Notification Big picture",
-                content = "Content of the notification",
-                style = bigPictureStyle(
-                    context = this,
-                    image = R.drawable.img
-                )
-            )
-
-        )
-
     }
 
-    override fun initView() {
-        mToolBar.title = getString(R.string.app_name)
-        mToolBar.setNavigationOnClickListener { drawerLayout.openDrawer(GravityCompat.START) }
-        navigationView.setNavigationItemSelectedListener(this)
-        navigationView.menu.findItem(R.id.nav_exit).isVisible = isLogin
+    private fun initViewPager() {
+        viewPager.offscreenPageLimit = titleList.size
+        viewPager.adapter = object : androidx.fragment.app.FragmentPagerAdapter(
+            supportFragmentManager,
+            BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT
+        ) {
+            override fun getItem(position: Int) = fragmentList[position]
 
-        // if (!isLogin)
-        //startKtxActivity<LoginActivity>()
+            override fun getCount() = titleList.size
 
+            override fun getPageTitle(position: Int) = titleList[position]
+
+        }
+        viewPager.isHorizontalScrollBarEnabled = false
+        tabLayout.setupWithViewPager(viewPager)
     }
 
 

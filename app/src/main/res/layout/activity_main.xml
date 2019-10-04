@@ -38,7 +38,8 @@
                     android:drawableLeft="@drawable/search"
                     android:gravity="center_vertical"
                     android:hint="@string/search_article"
-                    android:paddingLeft="5dp">
+                    android:paddingLeft="5dp"
+                    android:visibility="gone">
 
                 </TextView>
             </androidx.appcompat.widget.Toolbar>
@@ -54,6 +55,11 @@
             android:layout_weight="1"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="?attr/colorPrimary" />
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView

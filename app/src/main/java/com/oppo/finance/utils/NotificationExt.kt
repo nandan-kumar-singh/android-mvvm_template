@@ -85,14 +85,19 @@ data class NotificationData(
     val activity: Any = MainActivity::class.java,
     val style: NotificationCompat.Style? = null
 )
-//fun main() {
-//    showNotification(
-//        context = App.context,
-//        data = NotificationData(
-//            id = 0,
-//            title = "Header Notification ",
-//            content = "Content of the notification",
-//            style = null
-//        )
-//    )
-//}
+
+
+/**
+ *
+ * showNotification(context = this,
+ *      id = 3,
+ *      title = "Header Notification Big picture",
+ *      data = NotificationData(
+ *      content = "Content of the notification",
+ *      style = bigPictureStyle(
+ *          context = this,
+ *          image = R.drawable.img
+ *      )
+ *  )
+ *)
+ **/
