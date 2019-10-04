@@ -1,1 +1,4 @@
-class DatabseDao
+package com.oppo.finance.model.db
+class DatabaseDao{
+
+}

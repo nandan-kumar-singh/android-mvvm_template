@@ -2,11 +2,13 @@ package com.oppo.finance
 
 import android.app.Application
 import android.content.Context
+import androidx.multidex.MultiDex
+import androidx.multidex.MultiDexApplication
 import com.oppo.finance.model.bean.User
 import kotlin.properties.Delegates
 
 
-class App : Application() {
+class App : MultiDexApplication() {
 
     companion object {
         var context: Context by Delegates.notNull()
@@ -16,5 +18,6 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         context = applicationContext
+        MultiDex.install(context)
     }
 }

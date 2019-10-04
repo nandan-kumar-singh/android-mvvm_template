@@ -60,14 +60,14 @@ class Preference<T>(val name: String, private val default: T) : ReadWritePropert
     }
 
     /**
-     * 根据key删除存储数据
+     * clearPreference
      */
     fun clearPreference(key: String) {
         prefs.edit().remove(key).apply()
     }
 
     /**
-     * 序列化对象
+     * Serialized object
      * @param person
      * *
      * @return
@@ -88,7 +88,7 @@ class Preference<T>(val name: String, private val default: T) : ReadWritePropert
     }
 
     /**
-     * 反序列化对象
+     * Deserialized object
      * @param str
      * *
      * @return
@@ -113,7 +113,8 @@ class Preference<T>(val name: String, private val default: T) : ReadWritePropert
 
 
     /**
-     * 查询某个key是否已经存在
+     * Query if a key already exists
+
      *
      * @param key
      * @return
@@ -123,7 +124,7 @@ class Preference<T>(val name: String, private val default: T) : ReadWritePropert
     }
 
     /**
-     * 返回所有的键值对
+     * Return all key-value pairs
      *
      * @param context
      * @return

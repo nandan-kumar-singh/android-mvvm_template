@@ -19,4 +19,8 @@
     <string name="log_out_prompt">Do you want to Sign Out?</string>
     <string name="sign_out">Sign Out</string>
     <string name="net_error">Network_error</string>
+    <string name="signature">Sign</string>
+    <string name="loading">Loading</string>
+    <string name="load_failed">load_failed</string>
+    <string name="load_end">load_end</string>
 </resources>

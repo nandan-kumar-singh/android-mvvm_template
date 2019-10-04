@@ -2,4 +2,8 @@
 <resources>
 
     <dimen name="text_size_label">21sp</dimen>
+    <dimen name="txtLarge">22sp</dimen>
+    <dimen name="txtXLarge">24sp</dimen>
+    <dimen name="txtNormal">14sp</dimen>
+    <dimen name="txtLNormal">18sp</dimen>
 </resources>

@@ -4,7 +4,7 @@ import com.franmontiel.persistentcookiejar.PersistentCookieJar
 import com.franmontiel.persistentcookiejar.cache.SetCookieCache
 import com.franmontiel.persistentcookiejar.persistence.SharedPrefsCookiePersistor
 import com.oppo.finance.App
-import com.oppo.finance.utils.NetWorkUtils
+import com.oppo.finance.utils.isNetworkAvailable
 import okhttp3.Cache
 import okhttp3.CacheControl
 import okhttp3.OkHttpClient
@@ -32,13 +32,13 @@ object RetrofitClient : BaseRetrofitClient() {
             .cookieJar(cookieJar)
             .addInterceptor { chain ->
                 var request = chain.request()
-                if (!NetWorkUtils.isNetworkAvailable(App.context)) {
+                if (!isNetworkAvailable(App.context)) {
                     request = request.newBuilder()
                         .cacheControl(CacheControl.FORCE_CACHE)
                         .build()
                 }
                 val response = chain.proceed(request)
-                if (!NetWorkUtils.isNetworkAvailable(App.context)) {
+                if (!isNetworkAvailable(App.context)) {
                     val maxAge = 60 * 60
                     response.newBuilder()
                         .removeHeader("Pragma")

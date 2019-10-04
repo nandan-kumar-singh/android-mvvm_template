@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="nav_header_height">240dp</dimen>
+    <dimen name="dp_40">40dp</dimen>
+    <dimen name="dp_4">4dp</dimen>
+    <dimen name="sp_14">14dp</dimen>
 </resources>
