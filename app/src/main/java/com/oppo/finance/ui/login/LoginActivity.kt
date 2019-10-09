@@ -6,7 +6,7 @@ import androidx.lifecycle.Observer
 import com.oppo.finance.App
 import com.oppo.finance.R
 import com.oppo.finance.base.BaseVMActivity
-import com.oppo.finance.model.bean.User
+import com.oppo.finance.core.bean.User
 import com.oppo.finance.ui.main.MainActivity
 import com.oppo.finance.utils.Preference
 import com.oppo.finance.utils.startKtxActivity

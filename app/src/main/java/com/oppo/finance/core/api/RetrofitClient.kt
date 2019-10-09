@@ -1,4 +1,4 @@
-package com.oppo.finance.model.api
+package com.oppo.finance.core.api
 
 import com.franmontiel.persistentcookiejar.PersistentCookieJar
 import com.franmontiel.persistentcookiejar.cache.SetCookieCache

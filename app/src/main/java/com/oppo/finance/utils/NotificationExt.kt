@@ -2,20 +2,16 @@ package com.oppo.finance.utils
 
 import android.R
 import android.annotation.TargetApi
-import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
-import android.content.res.Resources
 import android.graphics.BitmapFactory
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
-import com.oppo.finance.App
 import com.oppo.finance.ui.main.MainActivity
-import java.lang.reflect.Constructor
 
 
 /** Components of a notification are :-

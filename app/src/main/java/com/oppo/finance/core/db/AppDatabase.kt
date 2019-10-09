@@ -1,10 +1,10 @@
-package com.oppo.finance.model.db
+package com.oppo.finance.core.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.oppo.finance.model.db.entity.User
+import com.oppo.finance.core.db.entity.User
 import com.oppo.finance.utils.DATABASE_NAME
 
 @Database(

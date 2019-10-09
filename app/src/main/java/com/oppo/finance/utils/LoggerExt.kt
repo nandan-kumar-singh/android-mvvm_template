@@ -4,7 +4,7 @@ import android.util.Log
 import com.oppo.finance.BuildConfig
 
 
-const val TAG = "ktx"
+const val TAG = "com.oppo.finance"
 
 var showLog = BuildConfig.DEBUG
 

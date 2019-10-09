@@ -1,4 +1,4 @@
-package com.oppo.finance.model.bean
+package com.oppo.finance.core.bean
 
 
 
@@ -7,7 +7,7 @@ package com.oppo.finance.model.bean
 //　　　　　　"imagePath":"http://www.wanandroid.com/blogimgs/50c115c2-cf6c-4802-aa7b-a4334de444cd.png",
 //　　　　　　"isVisible":1,
 //　　　　　　"order":0,
-//　　　　　　"title":"一起来做个App吧",
+//　　　　　　"title":"一Hello User",
 //　　　　　　"type":0,
 //　　　　　　"url":"http://www.wanandroid.com/blog/show/2"
 data class Banner(val desc: String,

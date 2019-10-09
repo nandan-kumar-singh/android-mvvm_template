@@ -1,4 +1,4 @@
-package com.oppo.finance.model.bean
+package com.oppo.finance.core.bean
 
 import java.io.Serializable
 

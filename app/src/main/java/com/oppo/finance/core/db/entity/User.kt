@@ -1,4 +1,4 @@
-package com.oppo.finance.model.db.entity
+package com.oppo.finance.core.db.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

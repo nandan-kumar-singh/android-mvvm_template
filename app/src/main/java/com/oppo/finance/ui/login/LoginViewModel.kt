@@ -2,8 +2,8 @@ package com.oppo.finance.ui.login
 
 import androidx.lifecycle.MutableLiveData
 import com.oppo.finance.base.BaseViewModel
-import com.oppo.finance.model.bean.User
-import com.oppo.finance.model.repository.LoginRepository
+import com.oppo.finance.core.bean.User
+import com.oppo.finance.core.repository.LoginRepository
 import com.oppo.finance.utils.executeResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -42,7 +42,6 @@ class LoginViewModel : BaseViewModel() {
                 errorBlock = { errMsg.value = result.errorMsg })
         }
     }
-
 
 
 }

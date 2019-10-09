@@ -19,7 +19,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     private var isLogin by Preference(Preference.IS_LOGIN, false)
     private var userJson by Preference(Preference.USER_GSON, "")
 
-    private val titleList = arrayOf("Home", "Settings", "Profile")
+    private val titleList = arrayOf(getString(R.string.home), "Settings", "Profile")
     private val fragmentList = arrayListOf<Fragment>()
     private val homeFragment by lazy { HomeFragment() }
     private val homeFragment1 by lazy { HomeFragment() }

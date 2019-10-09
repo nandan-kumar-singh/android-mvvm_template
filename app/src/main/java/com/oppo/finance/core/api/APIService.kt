@@ -1,6 +1,6 @@
-package com.oppo.finance.model.api
+package com.oppo.finance.core.api
 
-import com.oppo.finance.model.bean.*
+import com.oppo.finance.core.bean.*
 import retrofit2.http.*
 
 
@@ -15,6 +15,9 @@ interface APIService {
 
     @GET("/banner/json")
     suspend fun getBanner(): DataResponse<List<Banner>>
+
+    @GET("/banner/json")
+    suspend fun getFund(): DataResponse<Fund>
 
     @FormUrlEncoded
     @POST("/user/login")

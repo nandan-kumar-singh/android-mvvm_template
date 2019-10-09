@@ -15,6 +15,7 @@
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:elevation="0dp"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
             <androidx.appcompat.widget.Toolbar
@@ -22,6 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="?actionBarSize"
                 android:background="?attr/colorPrimary"
+                android:elevation="0dp"
                 android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
                 app:navigationIcon="@drawable/ic_menu_white"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
@@ -59,7 +61,8 @@
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:background="?attr/colorPrimary" />
+            android:background="?attr/colorPrimary"
+            android:elevation="0dp" />
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView

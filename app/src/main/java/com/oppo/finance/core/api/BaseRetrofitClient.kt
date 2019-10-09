@@ -1,7 +1,6 @@
-package com.oppo.finance.model.api
+package com.oppo.finance.core.api
 
 import com.oppo.finance.BuildConfig
-import com.squareup.moshi.Moshi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

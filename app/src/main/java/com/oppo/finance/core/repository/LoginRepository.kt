@@ -1,9 +1,9 @@
-package com.oppo.finance.model.repository
+package com.oppo.finance.core.repository
 
-import com.oppo.finance.model.api.BaseRepository
-import com.oppo.finance.model.api.RetrofitClient
-import com.oppo.finance.model.bean.DataResponse
-import com.oppo.finance.model.bean.User
+import com.oppo.finance.core.api.BaseRepository
+import com.oppo.finance.core.api.RetrofitClient
+import com.oppo.finance.core.bean.DataResponse
+import com.oppo.finance.core.bean.User
 
 
 class LoginRepository : BaseRepository() {

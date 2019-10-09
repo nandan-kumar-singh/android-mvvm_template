@@ -1,6 +1,6 @@
-package com.oppo.finance.model.api
+package com.oppo.finance.core.api
 
-import com.oppo.finance.model.bean.DataResponse
+import com.oppo.finance.core.bean.DataResponse
 
 open class BaseRepository {
 

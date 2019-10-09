@@ -1,7 +1,7 @@
-package com.oppo.finance.model.db
+package com.oppo.finance.core.db
 
 import androidx.room.*
-import com.oppo.finance.model.db.entity.User
+import com.oppo.finance.core.db.entity.User
 
 @Dao
 interface DatabaseService {

@@ -4,7 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.net.ConnectivityManager
 import com.oppo.finance.R
-import com.oppo.finance.model.bean.DataResponse
+import com.oppo.finance.core.bean.DataResponse
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.coroutineScope
 import retrofit2.HttpException
